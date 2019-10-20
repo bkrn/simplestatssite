@@ -1,0 +1,14 @@
+if: branch = master
+
+language: node_js
+node_js:
+ - "node"
+
+script:
+  - npm build
+
+deploy:
+  provider: surge
+  project: ./public/
+  domain:  stats.bkrn.org 
+  skip_cleanup: true
