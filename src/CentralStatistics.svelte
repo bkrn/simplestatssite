@@ -15,7 +15,7 @@
   <tr>
     <td>Mean</td>
     <td>
-      <span>{numericArray.reduce((a,b) => a+b) / numericArray.length}</span>
+      <span>{numericArray.reduce((a,b) => a+b, 0) / numericArray.length}</span>
     </td>
   </tr>
   <tr>

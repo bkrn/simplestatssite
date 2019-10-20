@@ -14,7 +14,7 @@
 <style>
   .view-grid {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 300px auto;
     grid-template-rows: 100px 100px 400px auto;
   }
 

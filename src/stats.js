@@ -35,17 +35,17 @@ export const modes = (array) => {
         }
         counts[array[ix]]++;
     }
-    const max = Object.entries(counts).reduce((a, b) => a[1] > b[1] ? a : b)[1];
+    const max = Object.entries(counts).reduce((a, b) => a[1] > b[1] ? a : b, 0)[1];
     return Object.entries(counts).filter((a) => a[1] == max).map((a) => a[0]);
 }
 
 export const mean = (array) => {
-    return array.reduce((a,b) => a + b) / array.length
+    return array.reduce((a,b) => a + b, 0) / array.length
 }
 
 export const variance = (array) => {
     const xhat = mean(array);
-    return array.map(v => Math.pow(v - xhat, 2)).reduce((a,b) => a + b) / (array.length - 1);
+    return array.map(v => Math.pow(v - xhat, 2)).reduce((a,b) => a + b, 0) / (array.length - 1);
 }
 
 export const stddev = (array) => {

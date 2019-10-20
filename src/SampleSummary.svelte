@@ -30,12 +30,14 @@
 </style>
 
 <section class="input">
+  <BoxPlot {numericArray} />
   <textarea
     placeholder="paste numbers here separated by whitespace and/or commas"
     rows="10"
+    cols="35"
     value={sourceString}
     on:input={ev => {
-      sampleSource.update((_) => ev.target.value);
+      sampleSource.update(_ => ev.target.value);
     }} />
 
 </section>
@@ -44,5 +46,5 @@
   <FiveNumber {numericArray} />
   <CentralStatistics {numericArray} />
   <NormalStats {numericArray} />
-  <BoxPlot {numericArray} />
+
 </section>
