@@ -5,7 +5,8 @@ node_js:
  - "node"
 
 script:
-  - npm build
+  - npm ci
+  - npm run build
 
 deploy:
   provider: surge
